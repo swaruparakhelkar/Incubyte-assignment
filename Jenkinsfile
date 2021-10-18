@@ -7,12 +7,12 @@ node{
     }
     stage('Clone repository') {
         echo "Cloning git repository to workspace"
-        checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'incubyte_github_token', url: "https://github.com/Lucifer0143/${product}.git"]]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'incubyte_github_token', url: "https://github.com/swaruparakhelkar/${product}.git"]]])
     }
 
     stage('Build image') {
         echo 'Build the docker flask image'
-        app = docker.build("mpatel143/${product}")
+        app = docker.build("swaruparakhelkar/${product}")
     }
 
     stage('Test image') {
