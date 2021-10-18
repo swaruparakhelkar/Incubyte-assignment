@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: flask
-        image: registry.hub.docker.com/mpatel143/incubyte-assignment:%IMAGE_NO%
+        image: registry.hub.docker.com/swaruparakhelkar/incubyte-assignment:%IMAGE_NO%
         ports:
         - containerPort: 5000
